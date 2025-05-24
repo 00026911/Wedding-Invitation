@@ -148,7 +148,7 @@ nav a:hover {
   background-repeat: no-repeat;
   opacity: 0.1;
   transform: rotate(15deg);
-  overflow-x: clip;
+ 
 }
 
 /* Floral elements */
