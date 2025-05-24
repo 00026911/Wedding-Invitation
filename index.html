@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Arkkim & Ayesha's Wedding</title>
+  <link rel="stylesheet" href="CSS/styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Parisienne&family=Playfair+Display&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+  <header>
+    <img Id="banner" src="IMG/banner.png" alt="Image of couple at picnic">
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="HTML/invitation.html">Invitation</a></li>
+        <li><a href="HTML/schedule.html">Schedule</a></li>
+        <li><a href="HTML/information.html">Information</a></li>
+        <li><a href="HTML/rsvp.html">RSVP</a></li>
+      </ul>
+    </nav>
+  </header>
+
+ <div class="floral-frame floral-top-left"></div>
+  <div class="floral-frame floral-bottom-right"></div>
+
+  <main class="invitation">
+    <section class="card">
+      <div class="floral-corner top-left">❀</div>
+      <div class="floral-corner top-right">❀</div>
+    
+      <h2>Your Invitation</h2>
+       <p><em>&#40;Click seal to open&#41;</em></p>
+  
+			<a href="HTML/invitation.html"><img class="iv-img"src="IMG/envelope.png" alt="image of couple"></a><br><br>
+      
+      <p><strong>Please RSVP before June 25th</strong></p><br>
+     
+      
+      <div class="divider">
+        <svg viewBox="0 0 100 20" preserveAspectRatio="none">
+          <path d="M0,10 Q25,15 50,10 T100,10" fill="none" stroke="#b76e79" stroke-width="1"/>
+        </svg>
+        <span>❀</span>
+        <svg viewBox="0 0 100 20" preserveAspectRatio="none">
+          <path d="M0,10 Q25,5 50,10 T100,10" fill="none" stroke="#b76e79" stroke-width="1"/>
+        </svg>
+      </div>
+      
+      <div class="cta-buttons">
+        <a href="HTML/rsvp.html" class="rsvp-button">RSVP Now</a>
+      </div>
+      
+      <div class="floral-corner bottom-left">❀</div>
+      <div class="floral-corner bottom-right">❀</div>
+    </section>
+  </main>
+  
+  <div id="countdown" class="script-font"></div>
+  
+  <footer>
+    <p class="serif-font">With love, Arkkim & Ayesha</p>
+    <div class="footer-flowers">
+      <span>❀</span>
+      <span>❀</span>
+      <span>❀</span>
+    </div>
+  </footer>
+
+  <button id="back-to-top" onclick="scrollToTop()" title="Go to top">↑</button>
+  
+  <script>
+    // Back-to-top button
+    const backToTop = document.getElementById('back-to-top');
+    window.addEventListener('scroll', () => {
+      backToTop.style.display = window.scrollY > 200 ? 'block' : 'none';
+    });
+    
+    function scrollToTop() {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    // Countdown Timer
+    const countdownDate = new Date("August 16, 2025 14:00:00").getTime();
+    const countdownEl = document.getElementById("countdown");
+    
+    function updateCountdown() {
+      const now = new Date().getTime();
+      const distance = countdownDate - now;
+      
+      if (distance < 0) {
+        countdownEl.innerHTML = "It's Wedding Time! 💍";
+        return;
+      }
+      
+      const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+      const hrs = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      const mins = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+      const secs = Math.floor((distance % (1000 * 60)) / 1000);
+      
+      countdownEl.innerHTML = `
+        <span class="countdown-segment">${days}<small>Days</small></span>
+        <span class="countdown-segment">${hrs}<small>Hours</small></span>
+        <span class="countdown-segment">${mins}<small>Minutes</small></span>
+        <span class="countdown-segment">${secs}<small>Seconds</small></span>
+      `;
+    }
+    
+    updateCountdown();
+    setInterval(updateCountdown, 1000);
+  </script>
+</body>
+</html>
