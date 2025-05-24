@@ -18,7 +18,8 @@ body {
   scroll-behavior: smooth;
   line-height: 1.6;
   width: 100%;
-  overflow-x: hidden;
+  max-width: 100%;
+  overflow: hidden;
 }
 
 *, *::before, *::after {
@@ -49,7 +50,7 @@ body {
 }
 
 .script-font1 {
-  font-family: Century
+  font-family: Century;
   font-size: 3.2rem;
   color: #800020;
   text-shadow: 1px 1px 3px rgba(0,0,0,0.1);
@@ -147,6 +148,7 @@ nav a:hover {
   background-repeat: no-repeat;
   opacity: 0.1;
   transform: rotate(15deg);
+  overflow-x: clip;
 }
 
 /* Floral elements */
