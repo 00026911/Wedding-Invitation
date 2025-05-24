@@ -17,6 +17,12 @@ body {
   padding: 0;
   scroll-behavior: smooth;
   line-height: 1.6;
+  width: 100%;
+  overflow-x: hidden;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
 }
 
 .iv-img	{
