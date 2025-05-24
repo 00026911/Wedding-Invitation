@@ -25,6 +25,7 @@ body {
 	height: Auto;
 	border: 4px solid #F88379;
 	border-radius: 5px;
+	object-fit: cover;
 	}
 .ii-img {
   margin: 10px auto;
