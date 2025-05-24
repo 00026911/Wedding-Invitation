@@ -132,11 +132,11 @@ nav a:hover {
   animation: fadeInUp 1s ease forwards;
   animation-delay: 0.3s;
   position: relative;
-  overflow: hidden;
+  overflow-x: clip;
   text-align: center;
 }
 
-.card::after {
+.card::after {   
   content: "";
   position: absolute;
   bottom: -20px;
